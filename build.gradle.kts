@@ -14,11 +14,10 @@ version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
-//    maven {
-//        isAllowInsecureProtocol = true
-//        url = uri("http://maven.yakclient.net/snapshots")
-//    }
-    mavenLocal()
+    maven {
+        isAllowInsecureProtocol = true
+        url = uri("http://maven.yakclient.net/snapshots")
+    }
     maven {
         name = "Durgan McBroom GitHub Packages"
         url = uri("https://maven.pkg.github.com/durganmcbroom/artifact-resolver")
