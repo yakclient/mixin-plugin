@@ -125,7 +125,7 @@ public class MixinPlugin : BootPlugin {
             }
 
             toWrite.forEach { (config, to) ->
-                val bytes = archive.reader[to]?.resource?.open()?.readInputStream()
+                val bytes = mixinAccess.read(to)
                     ?: throw IllegalArgumentException("Failed to inject into class '$to' because it does not exist!")
                 mixinAccess.write(to, Archives.resolve(ClassReader(bytes), config))
             }
