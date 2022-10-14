@@ -1,0 +1,19 @@
+{
+  "name": "mixin",
+  "packaging": "jar",
+  "entrypoint": "net.yakclient.plugins.mixin.MixinPlugin",
+  "plugins": [],
+  "dependencies": [
+    {
+      "request": {
+        "descriptor": "net.yakclient:archives-mixin:1.0-SNAPSHOT"
+      },
+      "repository": {
+        "type": "simple-maven",
+        "settings": {
+          "url": "http://maven.yakclient.net/snapshots"
+        }
+      }
+    }
+  ]
+}
