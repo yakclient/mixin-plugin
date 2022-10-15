@@ -30,6 +30,10 @@ repositories {
     }
 }
 
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor(0, "seconds")
+}
+
 dependencies {
     implementation("com.durganmcbroom:event-api:1.0-SNAPSHOT")
 
@@ -121,14 +125,6 @@ allprojects {
 
     group = "net.yakclient"
     version = "1.0-SNAPSHOT"
-
-    repositories {
-        mavenCentral()
-        maven {
-            isAllowInsecureProtocol = true
-            url = uri("http://maven.yakclient.net/snapshots")
-        }
-    }
 
     publishing {
         repositories {

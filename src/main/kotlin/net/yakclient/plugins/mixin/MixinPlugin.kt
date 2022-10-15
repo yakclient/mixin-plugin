@@ -23,7 +23,6 @@ public class MixinPlugin : BootPlugin {
         logger.log(Level.INFO, "Mixin plugin loading")
         isLoaded = true
 
-
         Boot.eventManager.subscribe(ApplicationLoadEvent::class) { (ref) ->
             val reader by ref::reader
 
